@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.text {
+    text-align: center;
+    font-size: 40px;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.pro2 {
+    width: 100%; /* Adjust the width as needed */
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 
+                0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: .4s;
+    background: linear-gradient(whitesmoke, whitesmoke);
+    display: flex; /* Add this line to enable flexbox */
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    text-align: center;
+    font-size: 24px;
+    color: #141e30;
+    background-color: #03e9f4;
+    width: 20%; /* Adjust the width as needed */
+    padding: 15px;
+    border: 0;
+    outline: 0lvb;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
