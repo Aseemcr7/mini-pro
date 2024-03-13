@@ -1,0 +1,55 @@
+let cart = [];
+let isCartVisible = false; // Variable to track the visibility of the cart items
+
+const toggleCart = () => {
+    const cartElement = document.getElementById('cart');
+    cartElement.classList.toggle('showCart');
+    isCartVisible = !isCartVisible;
+    updateCartList(); // Update the cart list visibility
+}
+
+const updateCartCount = () => {
+    const cartCountElement = document.getElementById('cartCount');
+    const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+    cartCountElement.innerText = totalQuantity;
+}
+
+const addToCart = (productName, productPrice) => {
+    const existingItem = cart.find(item => item.name === productName);
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({
+            name: productName,
+            price: productPrice,
+            quantity: 1
+        });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    updateCartCount();
+    updateCartList();
+}
+
+const updateCartList = () => {
+    const cartListElement = document.getElementById('cartList');
+    cartListElement.innerHTML = '';
+
+    if (isCartVisible) { // Only show detailed cart items if the cart is visible
+        cart.forEach(item => {
+            const newItem = document.createElement('div');
+            newItem.classList.add('item');
+            newItem.innerHTML = `
+                <div class="name">${item.name}</div>
+                <div class="totalPrice">$${item.price * item.quantity}</div>
+                <div class="quantity">
+                    <span class="minus" onclick="changeQuantityCart('${item.name}', 'minus')">-</span>
+                    <span>${item.quantity}</span>
+                    <span class="plus" onclick="changeQuantityCart('${item.name}', 'plus')">+</span>
+                </div>
+            `;
+            cartListElement.appendChild(newItem);
+        });
+    }
+}
