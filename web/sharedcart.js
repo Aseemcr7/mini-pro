@@ -53,3 +53,28 @@ const updateCartList = () => {
         });
     }
 }
+
+const changeQuantityCart = (productName, type) => {
+    const itemIndex = cart.findIndex(item => item.name === productName);
+
+    if (itemIndex >= 0) {
+        switch (type) {
+            case 'plus':
+                cart[itemIndex].quantity++;
+                break;
+            case 'minus':
+                cart[itemIndex].quantity = Math.max(1, cart[itemIndex].quantity - 1);
+                if (cart[itemIndex].quantity === 1) {
+                    // Optionally, remove the item from the cart when quantity becomes 0
+                    // cart.splice(itemIndex, 1);
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    updateCartList();
+}
