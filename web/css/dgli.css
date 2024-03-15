@@ -39,7 +39,7 @@ h3{
     border-radius: 20px;
     cursor: pointer;
     padding-top: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 
+    box-shadow: 0 14px 28px rgba(226, 123, 123, 0.25)), 
     0 10px 10px rgba(0, 0, 0, 0.22);
     transition: .4s;
     background: whitesmoke;    
@@ -49,6 +49,16 @@ h3{
     0 3px 6px rgba(0, 0, 0, 0.23);
     transform: translate(0px, -8px);    
 }
+.pro2 img{
+    object-fit: cover;
+    transition: transform 0.8s;
+    height: 100%;
+}
+
+
+.pro2:hover img{
+    transform: scale(1.5);
+ }
 img{
     width: 200px;
     height: 200px;
@@ -96,22 +106,18 @@ button{
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
 }
-.buy1:hover{
-    transform: translate(0px, -8px);
-}
-.buy2:hover{
-    transform: translate(0px, -8px);
-}
-.buy3:hover{
-    transform: translate(0px, -8px);
-}
-.buy4:hover{
-    transform: translate(0px, -8px);
-}
 .btn{
+    display: flex;
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
-
-
+    height: 10px;
+    width: 40em;
+    justify-content: space-between ;
+}
+.close{
+    background-color: #3b3e6e;
+}
+.btn button:hover{
+    background-color: #0056b3;
 }
