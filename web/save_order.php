@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="stylesheet" href="../web/css/order.css">
 </head>
 <body>
     <header>
@@ -14,15 +15,15 @@
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return validateForm();">
             <!-- ... (your user details input fields) ... -->
             <tr>
-                <td>USER NAME</td>
+                <td><h3>USER NAME </h3></td>
                 <td> <input type="text" id="username" name="user_name" placeholder=" Enter your name"></td>
             </tr>
             <tr>
-                <td>USER EMAIL</td>
+                <td><h3> USER EMAIL </h3></td>
                 <td> <input type="email" id="EMAIL" name="user_email" placeholder=" EXAMPLE@gmail.com"></td>
             </tr>
             <tr>
-                <td>MOBILE NUMBER</td>
+                <td><h3> MOBILE NUMBER </h3></td>
                 <td>
                     <select id="mobileSelect">
                         <option>+91</option>
@@ -37,16 +38,16 @@
                 </td>
             </tr>
             <tr>
-                <td>ADDRESS</td>
+                <td><h3> ADDRESS </h3></td>
                 <td><input type="text" id="address" name="add" placeholder="Delivery Address"></td>
             </tr>
             <tr>
-                <td>CITY</td>
+                <td><h3> CITY</h3></td>
                 <td><input type="text" id="city" name="city" placeholder="Enter the city name"></td>
             </tr>
 
             <tr>
-                <td>PINCODE</td>
+                <td><h3> PINCODE</h3></td>
                 <td><input type="number" id="pincode" name="pincode" placeholder="600071"></td>
             </tr>
 

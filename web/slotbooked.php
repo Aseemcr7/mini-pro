@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <table>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return validateForm();">
             <tr>
-                <td>Service</td>
+                <td class="tit"><h3>Service</h3></td>
                 <td>
                     <select id="services" name="service">
                         <option value="">Select Service</option>
@@ -56,15 +56,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </td>
             </tr>
             <tr>
-                <td>USER NAME</td>
+                <td class="tit"><h3> USER NAME</h3></td>
                 <td> <input type="text" id="username" name="user_name" placeholder=" Enter your name"></td>
             </tr>
             <tr>
-                <td>USER EMAIL</td>
+                <td class="tit"><h3> USER EMAIL</h3></td>
                 <td> <input type="email" id="EMAIL" name="user_email" placeholder=" EXAMPLE@gmail.com"></td>
             </tr>
             <tr>
-                <td>MOBILE NUMBER</td>
+                <td class="tit"><h3> MOBILE NUMBER</h3></td>
                 <td>
                     <select id="mobileSelect" name="mobile_code">
                         <option value="">Select Code</option>
@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td>
                     <input type="submit" name="confirm" id="submit" value="Confirm">
                 </td>
             </tr>
