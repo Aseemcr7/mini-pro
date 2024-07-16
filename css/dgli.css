@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: #00637C;
+}
+svg{
+    width: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 0%;
+    font-size: larger;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+h3{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding-top: 10px;
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    width:  100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.pro2{
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(226, 123, 123, 0.25)), 
+    0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: .4s;
+    background: whitesmoke;    
+}
+.pro2:hover{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16)
+    0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -8px);    
+}
+.pro2 img{
+    object-fit: cover;
+    transition: transform 0.8s;
+    height: 100%;
+}
+
+
+.pro2:hover img{
+    transform: scale(1.5);
+ }
+img{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+p{
+    text-align: center;
+    color: burlywood;
+    padding-top: 0 8px;
+}
+.buy1{
+    background: #2183a2;
+}
+.buy2{
+    background-color: #3b3e6e;
+}
+.buy3{
+    background-color: crimson;
+}
+.buy4{
+    background-color: #ff9f43;
+}
+@media(max-width:1000px){
+    .pro2{
+        width: 45%;
+    }
+}
+@media(max-width:750px){
+    .pro2{
+        width: 100%;
+    }
+}
+button{
+    text-align: center;
+    font-size: 24px;
+    color: azure;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.btn{
+    display: flex;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 10px;
+    width: 40em;
+    justify-content: space-between ;
+}
+.close{
+    width: 100%;
+    justify-content: space-between;
+    background-color: #3b3e6e;
+}
+.btn button:hover{
+    background-color: #0056b3;
+}
+.cartTab{
+ display: flex;
+ float: left;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dogs</title>
+    <link rel="icon" href="../web/images/favicon.png"> <!-- Update the path based on your project structure -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../web/css/dgli.css">
+</head>
+<body>
+    <header>
+        <div class="title"><h1>PRODUCT LIST</h1></div>
+        <div><marquee behavior="scroll" direction="left" scrollamount="4">
+            "Pick your pet over video call to ensure a personalized and seamless ordering process."
+          </marquee>
+          </div>
+        <div class="icon-cart" onclick="toggleCart()">
+            <svg aria-hidden="true" fill="none" viewBox="0 0 18 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+            </svg>
+            <span id="cartCount">0</span>
+        </div>
+    </header>
+
+    <div class="product">
+        <div class="pro2">
+            <img src="../web/img/dog/Firefly german shepard remove background add white background 65741.jpg">
+            <h3>GERMAN SHEPARD</h3>
+            <p>&#x20B9 10K</p>
+            Gender :
+            <input type="radio" id="male" name="Gender" value="Male">Male
+            <input type="radio" id="female" name="Gender" value="Female">Female
+            <br>
+            Type :
+            <select name="age" id="age">
+                <option value="puppy">Puppy</option>
+                <option value="adolescent">Adolescent</option>
+                <option value="adult">Adult</option>
+            </select>
+            <button class="buy1" onclick="addToCart('GERMAN SHEPARD', 10000)">Buy Now</button>
+        </div>
+        
+        <div class="pro2">
+            <img src="../web/img/dog/Firefly pomeranian dog with white background 52284 (1).jpg">
+            <h3>pomeranian dog</h3>
+            <p>&#x20B9 10K</p>
+            Gender :
+            <input type="radio" id="male" name="Gender" value="Male">Male
+            <input type="radio" id="female" name="Gender" value="Female">Female
+            <br>
+            Type :
+            <select name="age" id="age">
+                <option value="puppy">Puppy</option>
+                <option value="adolescent">Adolescent</option>
+                <option value="adult">Adult</option>
+            </select>
+            <button class="buy1" onclick="addToCart('pomeranian dog', 10000)">Buy Now</button>
+        </div>
+        
+        <div class="pro2">
+            <img src="../web/img/dog/Firefly husky with white background 3197.jpg">
+            <h3>Siberian Husky</h3>
+            <p>&#x20B9 10K</p>
+            Gender :
+            <input type="radio" id="male" name="Gender" value="Male">Male
+            <input type="radio" id="female" name="Gender" value="Female">Female
+            <br>
+            Type :
+            <select name="age" id="age">
+                <option value="puppy">Puppy</option>
+                <option value="adolescent">Adolescent</option>
+                <option value="adult">Adult</option>
+            </select>
+            <button class="buy1" onclick="addToCart('husky', 10000)">Buy Now</button>
+        </div>
+
+        <div class="pro2">
+            <img src="../web/img/dog/Firefly golden retriver with white background 82225.jpg">
+            <h3>Golden Retriever</h3>
+            <p>&#x20B9 10K</p>
+            Gender :
+            <input type="radio" id="male" name="Gender" value="Male">Male
+            <input type="radio" id="female" name="Gender" value="Female">Female
+            <br>
+            Type :
+            <select name="age" id="age">
+                <option value="puppy">Puppy</option>
+                <option value="adolescent">Adolescent</option>
+                <option value="adult">Adult</option>
+            </select>
+            <button class="buy1" onclick="addToCart('Golden Retriever', 10000)">Buy Now</button>
+        </div>
+    </div>
+
+    <div id="cart" class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div id="cartList" class="listCart">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div>
+            <button class="close" onclick="toggleCart()">CLOSE</button>
+            <a href="../web/save_order.html">
+                <button class="close">Check Out</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI/tZ3KO6EepI8h7NF9WPwQd6j8kdu1i6c5AIfcY=" crossorigin="anonymous"></script>
+    <script src="sharedcart.js" defer></script> <!-- Update the path based on your project structure -->
+</body>
+</html>
